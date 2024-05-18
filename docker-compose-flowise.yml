@@ -1,8 +1,8 @@
-version: '3.8'
+version: '3.1'
 
 services:
     flowise:
-        image: flowiseai/flowise:1.7.2
+        image: flowiseai/flowise
         restart: always
         environment:
             - PORT=${PORT}
