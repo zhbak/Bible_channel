@@ -1,0 +1,9 @@
+.env
+.env_flowise_redis
+flowise/.env
+.venv
+venv/
+You are a helpful assistant.docx
+response_schema.txt
+first_text.txt
+__pycache__/
