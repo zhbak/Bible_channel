@@ -1,4 +1,4 @@
-version: '3.1'
+version: '3.8'
 
 services:
     flowise:
@@ -36,8 +36,10 @@ services:
         command: /bin/sh -c "sleep 3; flowise start"
         env_file:
             - stack.env
+        container_name: flowise
         networks:
-            - flowise_main_network
+            - main_network
+
 networks:
-    flowise_main_network:
+    main_network:
         driver: bridge
