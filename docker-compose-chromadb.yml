@@ -10,7 +10,7 @@ services:
       - PERSIST_DIRECTORY=/chroma/chroma # this is the default path, change it as needed
       - ANONYMIZED_TELEMETRY=${ANONYMIZED_TELEMETRY:-TRUE}
     expose:
-      - "19868"
+      - ${CHROMA_PORT}
     networks:
       - flowise_main_network
 
