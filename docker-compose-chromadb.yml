@@ -11,6 +11,8 @@ services:
       - ANONYMIZED_TELEMETRY=${ANONYMIZED_TELEMETRY:-TRUE}
     expose:
       - ${CHROMA_PORT}
+    env_file:
+      - stack.env
     networks:
       - flowise_main_network
 
