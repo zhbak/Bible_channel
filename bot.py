@@ -37,7 +37,7 @@ The answer should be formatted in HTML and include the following structure:
     
     message_output = bible_message(system, user_input, llm) 
 
-    bot.send_message(-10019998338, text=message_output, parse_mode="HTML")
+    bot.send_message(-1002132823556, text=message_output, parse_mode="HTML")
 
 
 # Schedule the message to be sent every day at 04:30 AM UTC
