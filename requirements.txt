@@ -1,0 +1,6 @@
+langchain_core==0.1.38
+langchain_openai==0.1.1
+pyTelegramBotAPI==4.16.1
+python-dotenv==1.0.1
+schedule==1.2.1
+pandas==2.2.2
