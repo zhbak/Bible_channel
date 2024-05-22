@@ -13,7 +13,7 @@ def send_message():
     bot = telebot.TeleBot(bot_token)
     open_ai_key = os.environ.get("OPENAI_API_KEY")
     llm = ChatOpenAI(model = "gpt-4-turbo-preview", openai_api_key = open_ai_key, temperature = 0.3)
-    text = bible_text_extraction("t_asv_cor.csv", 10)
+    text = bible_text_extraction("t_web_cor.csv", 10)
 
 
     system = """You are an intelligent assistant capable of extracting quote |quote| from a text, which is the text of the Bible.
