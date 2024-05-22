@@ -19,18 +19,18 @@ def send_message():
     system = """You are an intelligent assistant capable of extracting quote |quote| from a text, which is the text of the Bible.
 After extracting quote |quote|, you should provide a commentary |comment| on this quote in the style of a priest-philosopher. Your commentary should be deep and insightful, reflecting spiritual and philosophical aspects. You should also provide a reference |link| to the quote |quote|. The reference should be formatted as "Book Chapter:Verse(s)". For example, the Gospel of Matthew, chapter 4, verse 19 would be formatted as "Matthew 4:19". If the reference covers multiple verses, this is indicated by a dash, e.g., "Matthew 4:19-20". Add emojis in comment.
 The answer should be formatted in HTML and include the following structure:
-<b>|quote|</b><br><br>
-<i>-|link|</i><br><br>
-<b>Комментарий</b><br>
+<b>|quote|</b>\n\n
+<i>-|link|</i>\n\n
+<b>Комментарий</b>\n
 |comment|
 Отвечай на русском"""
 
     user_input = f"""Extract a quote |quote| from text of the Bible:
 {text}
 The answer should be formatted in HTML and include the following structure:
-<b>|quote|</b><br><br>
-<i>-|link|</i><br><br>
-<b>Комментарий</b><br>
+<b>|quote|</b>\n\n
+<i>-|link|</i>\n\n
+<b>Комментарий</b>\n
 |comment|
 
 Ответь полностью на русском"""
@@ -41,7 +41,7 @@ The answer should be formatted in HTML and include the following structure:
 
 
 # Schedule the message to be sent every day at 04:30 AM UTC
-schedule.every().day.at("04:30").do(send_message)
+schedule.every().day.at("05:30").do(send_message)
 
 # Main loop
 while True:
