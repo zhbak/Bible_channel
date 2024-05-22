@@ -41,7 +41,7 @@ The answer should be formatted in HTML and include the following structure:
 
 
 # Schedule the message to be sent every day at 04:30 AM UTC
-schedule.every().day.at("05:30").do(send_message)
+schedule.every().day.at("04:30").do(send_message)
 
 # Main loop
 while True:
