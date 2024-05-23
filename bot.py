@@ -16,21 +16,21 @@ def send_message():
     text = bible_text_extraction("t_web_cor.csv", 10)
 
 
-    system = """You are an intelligent assistant capable of extracting quote |quote| from a text, which is the text of the Bible.
-After extracting quote |quote|, you should provide a commentary |comment| on this quote in the style of a priest-philosopher. Your commentary should be deep and insightful, reflecting spiritual and philosophical aspects. You should also provide a reference |link| to the quote |quote|. The reference should be formatted as "Book Chapter:Verse(s)". For example, the Gospel of Matthew, chapter 4, verse 19 would be formatted as "Matthew 4:19". If the reference covers multiple verses, this is indicated by a dash, e.g., "Matthew 4:19-20". Add emojis in comment.
+    system = """You are an intelligent assistant capable of extracting a semantic fragment |fragment| from a text, which is the text of the Bible.
+After extracting the fragment |fragment|, you should provide a commentary |comment| on this fragment in the style of a priest-philosopher. Your commentary should be deep and insightful, reflecting spiritual and philosophical aspects. You should also provide a reference |link| to the fragment |fragment|. The reference should be formatted as "Book Chapter:Verse(s)". For example, the Gospel of Matthew, chapter 4, verse 19 would be formatted as "Matthew 4:19". If the reference covers multiple verses, this is indicated by a dash, e.g., "Matthew 4:19-20". Add emojis in comment.
 The answer should be formatted in HTML and include the following structure:
-<b>|quote|</b>\n\n
+<b>|fragment|</b>\n\n
 <i>-|link|</i>\n\n
-<b>Комментарий</b>\n
+<b>Комментарий</b>
 |comment|
 Отвечай на русском"""
 
-    user_input = f"""Extract a quote |quote| from text of the Bible:
+    user_input = f"""Extract a fragment |fragment| from text of the Bible:
 {text}
 The answer should be formatted in HTML and include the following structure:
-<b>|quote|</b>\n\n
+<b>|fragment|</b>\n\n
 <i>-|link|</i>\n\n
-<b>Комментарий</b>\n
+<b>Комментарий</b>
 |comment|
 
 Ответь полностью на русском"""
